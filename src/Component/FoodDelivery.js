@@ -15,9 +15,9 @@ export default function FoodDelivery() {
 
   return (
     <>
-      <h2 className="font-bold text-2xl mt-12 ml-23 mb-5">Cities with food delivery</h2>
+      <h2 className="font-bold text-2xl mt-12 ml-65 mb-5">Cities with food delivery</h2>
 
-      <div className="w-[80%] mx-auto flex flex-wrap justify-center gap-4">
+      <div className="w-[80%] mx-auto flex flex-wrap justify-center gap-4  mb-10">
         {visibleCities.map((list, index) => (
           <FoodCityList key={index} list={list} />
         ))}
