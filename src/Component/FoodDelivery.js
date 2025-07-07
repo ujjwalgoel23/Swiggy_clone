@@ -22,10 +22,9 @@ export default function FoodDelivery() {
           <FoodCityList key={index} list={list} />
         ))}
      
-
-      {FoodCities.length > 11 && (
-        <button onClick={() => setShowMore(!showMore)} className="  bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition  block text-base font-semibold  w-60 h-18">{showMore ? "Show Less" : "Show More"} </button>
-      )}
+      {
+      FoodCities.length > 11 &&  <button onClick={() => setShowMore(!showMore)} className="  bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition  block text-base font-semibold  w-60 h-18">{showMore ? "Show Less" : "Show More"} </button>
+      }
        </div>
     </>
   );
