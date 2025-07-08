@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Header from "./Component/Header";
-import FoodOption from "./Component/FoodOption";
-import GrocerOption from "./Component/GroceryOption";
-import DineOption from "./Component/DineOption";
-import Poster   from "./Component/Poster";
-import FoodDelivery from "./Component/FoodDelivery";
+import Header from "./Component/HomePage/Header";
+import FoodOption from "./Component/HomePage/FoodOption";
+import GrocerOption from "./Component/HomePage/GroceryOption";
+import DineOption from "./Component/HomePage/DineOption";
+import Poster   from "./Component/HomePage/Poster";
+import FoodDelivery from "./Component/HomePage/FoodDelivery";
+import Home from "./Component/Restaurant/Home"
 
   function App(){
 
@@ -17,6 +18,7 @@ import FoodDelivery from "./Component/FoodDelivery";
         <DineOption/>
         <Poster/>
         <FoodDelivery/>
+        <Home/>
         </>
     )
 }

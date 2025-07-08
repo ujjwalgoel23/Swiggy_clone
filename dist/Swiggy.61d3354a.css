@@ -62,7 +62,6 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --color-orange-500: oklch(70.5% .213 47.604);
     --color-orange-600: oklch(64.6% .222 41.116);
-    --color-amber-400: oklch(82.8% .189 84.429);
     --color-gray-200: oklch(92.8% .006 264.531);
     --color-gray-300: oklch(87.2% .01 258.338);
     --color-gray-500: oklch(55.1% .027 264.364);
@@ -483,22 +482,6 @@
     margin-bottom: calc(var(--spacing) * 20);
   }
 
-  .ml-23 {
-    margin-left: calc(var(--spacing) * 23);
-  }
-
-  .ml-50 {
-    margin-left: calc(var(--spacing) * 50);
-  }
-
-  .ml-60 {
-    margin-left: calc(var(--spacing) * 60);
-  }
-
-  .ml-64 {
-    margin-left: calc(var(--spacing) * 64);
-  }
-
   .ml-65 {
     margin-left: calc(var(--spacing) * 65);
   }
@@ -551,6 +534,10 @@
     height: calc(var(--spacing) * 44);
   }
 
+  .h-45 {
+    height: calc(var(--spacing) * 45);
+  }
+
   .h-110 {
     height: calc(var(--spacing) * 110);
   }
@@ -569,6 +556,10 @@
 
   .w-60 {
     width: calc(var(--spacing) * 60);
+  }
+
+  .w-70 {
+    width: calc(var(--spacing) * 70);
   }
 
   .w-80 {
