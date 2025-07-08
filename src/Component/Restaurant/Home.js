@@ -23,11 +23,14 @@ export default function Home(){
        
        
     return(
-        <div className="flex flex-wrap w-[80%] mx-auto mt-20 gap-5">
+        
+        <div className="flex flex-wrap w-[90%] justify-center mx-auto mt-20 gap-3 ">
         {
+            
             RestData?.map((restInfo)=><RestCard key={restInfo.info.id} restInfo={restInfo}/>)
         }
         </div>
+        
     )
 
 }
