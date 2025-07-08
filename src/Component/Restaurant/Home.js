@@ -2,7 +2,7 @@ import { useEffect,useState } from "react";
 import RestCard from "./RestCard";
 
 export default function Home(){
-    
+
      const [RestData,setRestData]=useState([]);
  
         useEffect(()=>{
@@ -17,15 +17,15 @@ export default function Home(){
              setRestData(data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
             
             }
-            
+
             fetchData();
         },[])
        
     return(
+        
         <div className="flex flex-wrap w-[90%] justify-center mx-auto mt-20 gap-3 ">
         {
-            
-            RestData?.map((restInfo)=><RestCard key={restInfo.info.id} restInfo={restInfo}/>)
+           RestData?.map((restInfo)=><RestCard key={restInfo.info.id} restInfo={restInfo}/>)
         }
         </div> 
     )
