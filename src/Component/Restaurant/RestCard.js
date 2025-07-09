@@ -1,8 +1,10 @@
+import { Link } from "react-router";
 
 export default function RestCard({ restInfo }) {
   
   return (
-    <div className="w-[270px] m-3 bg-white rounded-xl shadow-md hover:shadow-xl transition-all cursor-pointer font-sans ">
+    <Link to={"/city/delhi/"+restInfo?.info?.id}>
+    <div className="w-[270px] m-3 bg-white rounded-xl shadow-md hover:shadow-xl transition transform hover:scale-95  font-sans ">
       
       <div className="relative">
         <img
@@ -18,18 +20,19 @@ export default function RestCard({ restInfo }) {
 
       <div className="p-3 text-[#282b2f]">
         <h3 className="text-xl font-bold truncate">{ restInfo?.info?.name}</h3>
-        <div className="flex items-center text-sm font-semibold text-gray-800 mt-1">
+        <div className="flex items-center text-sm font-semibold text-gray-800 ">
           <span className="text-green-600">★ </span>
-          <span className="mx-1 text-black-600">{restInfo?.info?.avgRating} •</span>
+          <span className=" text-black-600">{restInfo?.info?.avgRating} •</span>
           <span>{restInfo?.info?.sla?.slaString}</span>
         </div>
 
-        <p className="text-gray-700 text-s mt-1 truncate">
+        <p className="text-gray-700 text-s  truncate ">
           {restInfo?.info?.cuisines.join(", ")}
         </p>
 
         <p className="text-gray-700 text-sm">{restInfo?.info?.locality || restInfo?.info?.areaName}</p>
       </div>
     </div>
+    </Link>
   );
 }
