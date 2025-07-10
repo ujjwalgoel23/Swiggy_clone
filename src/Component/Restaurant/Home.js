@@ -17,6 +17,7 @@ export default function Home() {
 
       const restaurants = data?.data?.cards;
 
+      
       setRestData(restaurants);
 
     }
@@ -24,9 +25,10 @@ export default function Home() {
     fetchData();
   }, []);
 
- if (RestData.length === 0) {
-    return <Shimmer />;
-  }
+if ( RestData.length === 0) {
+  return <Shimmer />;
+}
+
 
   return (  
     <>
