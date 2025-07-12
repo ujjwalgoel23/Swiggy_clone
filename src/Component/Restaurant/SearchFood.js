@@ -2,6 +2,7 @@ import { useState,useEffect } from "react";
 import { useParams } from "react-router"
 
 export default function SearchFood(){
+
     const {id}=useParams();
     const [food,setFood]=useState("");
      const [RestData,setRestData]=useState([]);
@@ -17,7 +18,7 @@ export default function SearchFood(){
            setRestData(filterData);
          }
      
-         fetchData();
+       if (food.length>1)    fetchData();
        }, []);
      
 

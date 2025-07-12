@@ -28,7 +28,7 @@ export default function RestaurantMenu(){
 
        <div className="w-[80%] mt-20 mx-auto mb-20">
         <Link to={`/city/delhi/${id}/search`}>
-        <p className="text-center w-full py-4 rounded-3xl bg-gray-200 text-2xl">Search for Dishes</p>
+        <p className="text-center w-full py-4 rounded-2xl bg-gray-200 text-2xl">Search for Dishes</p>
         </Link>
        </div>
 
