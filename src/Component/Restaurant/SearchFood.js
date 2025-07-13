@@ -3,9 +3,9 @@ import { useParams } from "react-router";
 
 export default function SearchFood() {
   const { id } = useParams();
-  const [food, setFood] = useState("");
-  const [RestData, setRestData] = useState([]);
-  const [FilteredResult, setFilteredResult] = useState([]);
+  const [food, setFood] = useState(""); //Stores the text entered in the search box.
+  const [RestData, setRestData] = useState([]); //Stores the entire menu data fetched from Swiggy’s API.
+  const [FilteredResult, setFilteredResult] = useState([]);  //Stores the filtered results — based on what the user searched for (food).
 
   useEffect(() => {
     async function fetchData() {
@@ -61,7 +61,7 @@ export default function SearchFood() {
 
               <div className="w-[130px] h-[100px] relative"> 
                   <img className="w-full h-full object-cover rounded-xl" src={`https://media-assets.swiggy.com/swiggy/image/upload/${item.imageId}`}/>
-                  <button className="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 bg-white px-4 py-1 rounded-lg text-green-600 font-bold shadow-md">   ADD </button>
+                  <button className="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 bg-white px-4 py-1 rounded-lg text-green-600 font-bold shadow-md">ADD</button>
               </div>
             </div>
           ))}

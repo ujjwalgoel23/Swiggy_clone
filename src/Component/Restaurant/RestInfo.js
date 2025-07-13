@@ -1,4 +1,27 @@
+import { useState } from "react";
+import {addItems,IncrementItems,DecrementItems} from "../Redux/cartSlicer";
+import { useDispatch } from "react-redux";
+
 export default function RestInfo({restData}){
+
+    const [count,setCount]=useState(0);
+    const dispatch=useDispatch();
+
+    function handleAddItems(){
+      setCount(1);
+      dispatch(addItems(restData));
+    }
+
+    function handleIncrementItems(){
+        setCount(count+1);
+        dispatch(IncrementItems(restData));
+    }  
+
+    function handleDecrementItems(){
+        setCount(count-1);
+        dispatch(DecrementItems(restData));
+    }
+
     return(
         <>
         <div className="flex w-full justify-between mb-2 pb-2">
@@ -14,11 +37,19 @@ export default function RestInfo({restData}){
                 </p>
             </div>
 
-            <div className="w-[20%] relative">
+            <div className="w-[20%] relative h-42">
                 
-             <img className=" w-full h-35 object-cover rounded-3xl" src={"https://media-assets.swiggy.com/swiggy/image/upload/"+restData?.imageId}></img>
-             <button className="absolute bottom- left-11 text-2xl rounded-xl text-green-600 px-6 py-2  shadow-md border border-white bg-white">ADD</button>
-            </div>
+             <img className=" w-[80%] h-35 object-cover rounded-3xl" src={"https://media-assets.swiggy.com/swiggy/image/upload/"+restData?.imageId}></img>
+             {
+               (count===0)?(<button className="absolute bottom-1  left-11 text-2xl rounded-xl text-green-600 px-6 py-2  shadow-md border border-white bg-white" onClick={()=>handleAddItems()}>ADD</button>):(
+               <div className="absolute   rounded-2xl bottom-1 left-5  flex  gap-3  text-2xl text-green-600 px-6 py-2  shadow-md border border-white bg-white">
+                <button onClick={handleDecrementItems()}></button>
+                <span>{count}</span>
+                <button onClick={handleIncrementItems}>+</button>
+               </div>
+               )
+             }
+               </div>
 
         </div>
         <hr className=" mb-6 mt-2"></hr>
