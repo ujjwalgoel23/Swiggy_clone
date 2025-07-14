@@ -1,24 +1,24 @@
 import { useState } from "react";
 import {addItems,IncrementItems,DecrementItems} from "../Redux/cartSlicer";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function RestInfo({restData}){
 
-    const [count,setCount]=useState(0);
     const dispatch=useDispatch();
+    const items=useSelector(state=>state.cartSlice.items);
+
+    const element =items.find(item=>item.id===restData.id);
+    const count=element? element.quantity:0;
 
     function handleAddItems(){
-      setCount(1);
       dispatch(addItems(restData));
     }
 
     function handleIncrementItems(){
-        setCount(count+1);
         dispatch(IncrementItems(restData));
     }  
 
-    function handleDecrementItems(){
-        setCount(count-1);
+    function handleDecrementItems(){ 
         dispatch(DecrementItems(restData));
     }
 
@@ -43,9 +43,9 @@ export default function RestInfo({restData}){
              {
                (count===0)?(<button className="absolute bottom-1  left-11 text-2xl rounded-xl text-green-600 px-6 py-2  shadow-md border border-white bg-white" onClick={()=>handleAddItems()}>ADD</button>):(
                <div className="absolute   rounded-2xl bottom-1 left-5  flex  gap-3  text-2xl text-green-600 px-6 py-2  shadow-md border border-white bg-white">
-                <button onClick={handleDecrementItems()}></button>
+                <button onClick={()=>handleDecrementItems()}>-</button>
                 <span>{count}</span>
-                <button onClick={handleIncrementItems}>+</button>
+                <button onClick={()=>handleIncrementItems()}>+</button>
                </div>
                )
              }

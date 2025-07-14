@@ -6,7 +6,7 @@ export default function MenuCard({menuItems,foodselected}){
     const [isOpen , setIsOpen]=useState(true);
     
 
-       if("categories" in menuItems){
+       if("categories" in menuItems){   
         return(
             <div className="w-full mt-4">
               <p className="text-2xl font-bold mt-4">{menuItems.title}</p>
