@@ -1,5 +1,5 @@
 import { useState } from "react"
-import RestInfo from "./RestInfo"
+import RestInfo from "./RestInfo";
 
 export default function MenuCard({menuItems,foodselected}){
 
@@ -8,8 +8,8 @@ export default function MenuCard({menuItems,foodselected}){
 
        if("categories" in menuItems){   
         return(
-            <div className="w-full mt-4">
-              <p className="text-2xl font-bold mt-4">{menuItems.title}</p>
+            <div className="w-[80%] mx-auto mt-4">
+              <p className="text-base font-bold mt-4">{menuItems.title}</p>
               <div>
                 {
                     menuItems?.categories?.map((items)=><MenuCard key={items?.title} menuItems={items} foodselected={foodselected}/>)
@@ -21,10 +21,10 @@ export default function MenuCard({menuItems,foodselected}){
       
        if(!isOpen){
         return(
-        <div className="w-full">
+        <div className="w-[80%] mx-auto">
             <div className="flex justify-between w-full">
-            <p className="text-3xl font-bold mb-4">{menuItems.title}  </p>
-            <button className=" text-2xl font-bold mr-20" onClick={()=>setIsOpen(!isOpen)}>{isOpen?'˄':'˅'} </button>
+            <p className="text-base font-bold mb-4">{menuItems.title}  </p>
+            <button className=" text-xl font-semibold mr-3" onClick={()=>setIsOpen(!isOpen)}>{isOpen?'˄':'˅'} </button>
         </div>
         <div className="h-1 bg-gray-200 mt-2 mb-2"></div>
         </div>
@@ -33,10 +33,10 @@ export default function MenuCard({menuItems,foodselected}){
 
        if(foodselected==='veg'){
         return(
-              <div className="w-full">
+              <div className="w-[80%] mx-auto">
              <div className="flex justify-between w-full">
-            <p className="text-3xl font-bold mb-4">{menuItems.title}  </p>
-            <button className=" text-2xl font-bold mr-20" onClick={()=>setIsOpen(!isOpen)}>{isOpen?'˄':'˅'} </button>
+            <p className="text-base font-bold mb-4">{menuItems.title}  </p>
+            <button className=" text-xl font-semibold mr-3" onClick={()=>setIsOpen(!isOpen)}>{isOpen?'˄':'˅'} </button>
         </div>
             <div>
                 { menuItems?.itemCards?.filter((food)=>"isVeg" in food?.card?.info  ).map((items)=><RestInfo key={items?.card?.info?.id} restData={items?.card?.info}/>) }
@@ -49,10 +49,10 @@ export default function MenuCard({menuItems,foodselected}){
      
        if(foodselected==='nonveg'){
         return(
-             <div className="w-full">
+             <div className="w-[80%] mx-auto">
              <div className="flex justify-between w-full">
-            <p className="text-3xl font-bold mb-4">{menuItems.title}  </p>
-            <button className=" text-2xl font-bold mr-20" onClick={()=>setIsOpen(!isOpen)}>{isOpen?'˄':'˅'} </button>
+            <p className="text-base font-bold mb-4">{menuItems.title}  </p>
+            <button className=" text-xl font-semibold mr-3" onClick={()=>setIsOpen(!isOpen)}>{isOpen?'˄':'˅'} </button>
         </div>
             <div>
                 { menuItems?.itemCards?.filter((food)=>!("isVeg" in food?.card?.info ) ).map((items)=><RestInfo key={items?.card?.info?.id} restData={items?.card?.info}/>) }
@@ -65,10 +65,10 @@ export default function MenuCard({menuItems,foodselected}){
 
       if(foodselected ==='bestseller'){
         return(
-             <div className="w-full">
+             <div className="w-[80%] mx-auto">
              <div className="flex justify-between w-full">
-            <p className="text-3xl font-bold mb-4">{menuItems.title}  </p>
-            <button className=" text-2xl font-bold mr-20" onClick={()=>setIsOpen(!isOpen)}>{isOpen?'˄':'˅'} </button>
+            <p className="text-base font-bold mb-4">{menuItems.title}  </p>
+            <button className=" text-xl font-semibold mr-3" onClick={()=>setIsOpen(!isOpen)}>{isOpen?'˄':'˅'} </button>
         </div>
             <div>
                 { menuItems?.itemCards?.filter((food)=>"isBestseller" in food?.card?.info   ).map((items)=><RestInfo key={items?.card?.info?.id} restData={items?.card?.info}/>) }
@@ -81,11 +81,11 @@ export default function MenuCard({menuItems,foodselected}){
 
     return(
        
-        <div className="w-full">
+        <div className="w-[80%] mx-auto">
             
              <div className="flex justify-between w-full">
-            <p className="text-3xl font-bold mb-4">{menuItems.title}  </p>
-            <button className=" text-2xl font-bold mr-20" onClick={()=>setIsOpen(!isOpen)}>{isOpen?'˄':'˅'} </button>
+            <p className="text-base font-bold mb-4">{menuItems.title}  </p>
+            <button className=" text-xl font-semibold mr-3" onClick={()=>setIsOpen(!isOpen)}>{isOpen?'˄':'˅'    } </button>
         </div>
             <div>
                 { menuItems?.itemCards?.map((items)=><RestInfo key={items?.card?.info?.id} restData={items?.card?.info}/>) }

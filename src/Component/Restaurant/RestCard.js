@@ -11,8 +11,7 @@ export default function RestCard({ restInfo }) {
           className="w-full h-[160px] object-cover rounded-2xl"
           src={`https://media-assets.swiggy.com/swiggy/image/upload/${restInfo?.info?.cloudinaryImageId}`}
         />
-        
-       
+          
           <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/70 to-transparent px-4 py-2 text-white text-lg font-bold">
             {restInfo?.info?.aggregatedDiscountInfoV3?.header} {restInfo?.info?.aggregatedDiscountInfoV3?.subHeader}
           </div>
