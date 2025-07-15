@@ -19,9 +19,13 @@ export default function MenuCard({menuItems,foodselected}){
         )
        }
         return(
-            <div className="w-[80%] mx-auto mt-4">
-              <p className="text-base font-bold mt-4">{menuItems.title}</p>
+            <div className="w-[80%] mx-auto mt-4 ">
+              <div className="flex justify-between w-full">
+            <p className="text-base font-bold mb-4">{menuItems.title}  </p>
+            <button className=" text-xl font-semibold mr-3" onClick={()=>setIsOpen(!isOpen)}>{isOpen?'˄':'˅'} </button>
+             </div>
               <div>
+                
                 {
                     menuItems?.categories?.map((items)=><MenuCard key={items?.title} menuItems={items} foodselected={foodselected}/>)
                 }
