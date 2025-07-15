@@ -3,10 +3,21 @@ import RestInfo from "./RestInfo";
 
 export default function MenuCard({menuItems,foodselected}){
 
-    const [isOpen , setIsOpen]=useState(true);
-    
+   
+    const [isOpen , setIsOpen]=useState(false);
 
        if("categories" in menuItems){   
+         if(!isOpen){
+         return(
+        <div className="w-[80%] mx-auto">
+            <div className="flex justify-between w-full">
+            <p className="text-base font-bold mb-4">{menuItems.title}  </p>
+            <button className=" text-xl font-semibold mr-3" onClick={()=>setIsOpen(!isOpen)}>{isOpen?'˄':'˅'} </button>
+        </div>
+        <div className="h-1 bg-gray-200 mt-1 mb-2"></div>
+        </div>
+        )
+       }
         return(
             <div className="w-[80%] mx-auto mt-4">
               <p className="text-base font-bold mt-4">{menuItems.title}</p>
@@ -85,7 +96,7 @@ export default function MenuCard({menuItems,foodselected}){
             
              <div className="flex justify-between w-full">
             <p className="text-base font-bold mb-4">{menuItems.title}  </p>
-            <button className=" text-xl font-semibold mr-3" onClick={()=>setIsOpen(!isOpen)}>{isOpen?'˄':'˅'    } </button>
+            <button className=" text-xl font-semibold mr-3" onClick={()=>setIsOpen(!isOpen)}> {isOpen?'˄':'˅'} </button>
         </div>
             <div>
                 { menuItems?.itemCards?.map((items)=><RestInfo key={items?.card?.info?.id} restData={items?.card?.info}/>) }

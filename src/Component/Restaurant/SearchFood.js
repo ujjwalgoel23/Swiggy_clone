@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
+import RestInfo from "../Restaurant/RestInfo"
 
 export default function SearchFood() {
   const { id } = useParams();
@@ -47,25 +48,21 @@ export default function SearchFood() {
     setFilteredResult([...uniqueMap.values()]);
   }, [food, RestData]);
 
+  useEffect(()=>{
+    console.log("Hii")
+    console.log(FilteredResult);
+  },[FilteredResult] );
+
   return (
     <div className="w-[60%] mx-auto mt-15">
       <input className=" w-full h-10 py-1 text-sm rounded-md" placeholder="Search here" onChange={(e) => setFood(e.target.value)} value={food}/>
       <hr></hr>
-       <div className="mt-10">{FilteredResult.map((item) => (
-            <div  key={item.id} className="flex justify-between items-start border-b py-6">
-              <div className="w-[80%]">
-                <p className="text-xl font-semibold">{item.name}</p>
-                <p className="text-md font-medium mt-1"> ₹{(item.price ?? item.defaultPrice) / 100}</p>
-                <p className="text-gray-600 text-sm mt-2">{item?.description}</p>
-              </div>
+      <div className="mt-10">
+  {FilteredResult.map((item, index) => (
+    <RestInfo key={index} restData={item} />
+  ))}
+</div>
 
-              <div className="w-[130px] h-[100px] relative"> 
-                  <img className="w-full h-full object-cover rounded-xl" src={`https://media-assets.swiggy.com/swiggy/image/upload/${item.imageId}`}/>
-                  <button className="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 bg-white px-4 py-1 rounded-lg text-green-600 font-bold shadow-md"  >ADD </button>
-              </div>
-            </div>
-          ))}
-        </div>
     </div>
   );
 }  

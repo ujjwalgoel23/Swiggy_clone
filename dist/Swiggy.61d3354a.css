@@ -74,7 +74,6 @@
     --color-gray-200: oklch(92.8% .006 264.531);
     --color-gray-300: oklch(87.2% .01 258.338);
     --color-gray-500: oklch(55.1% .027 264.364);
-    --color-gray-600: oklch(44.6% .03 256.802);
     --color-gray-700: oklch(37.3% .034 259.733);
     --color-gray-800: oklch(27.8% .033 256.848);
     --color-black: #000;
@@ -103,9 +102,6 @@
     --radius-lg: .5rem;
     --radius-xl: .75rem;
     --radius-2xl: 1rem;
-    --ease-in: cubic-bezier(.4, 0, 1, 1);
-    --ease-out: cubic-bezier(0, 0, .2, 1);
-    --ease-in-out: cubic-bezier(.4, 0, .2, 1);
     --animate-pulse: pulse 2s cubic-bezier(.4, 0, .6, 1) infinite;
     --default-transition-duration: .15s;
     --default-transition-timing-function: cubic-bezier(.4, 0, .2, 1);
@@ -403,16 +399,8 @@
     bottom: calc(var(--spacing) * 2);
   }
 
-  .bottom-\[-10px\] {
-    bottom: -10px;
-  }
-
   .left-0 {
     left: calc(var(--spacing) * 0);
-  }
-
-  .left-1\/2 {
-    left: 50%;
   }
 
   .left-2 {
@@ -505,6 +493,10 @@
 
   .mt-5 {
     margin-top: calc(var(--spacing) * 5);
+  }
+
+  .mt-7 {
+    margin-top: calc(var(--spacing) * 7);
   }
 
   .mt-10 {
@@ -679,10 +671,6 @@
     height: calc(var(--spacing) * 110);
   }
 
-  .h-\[100px\] {
-    height: 100px;
-  }
-
   .h-\[120px\] {
     height: 120px;
   }
@@ -783,10 +771,6 @@
     width: 100%;
   }
 
-  .w-\[130px\] {
-    width: 130px;
-  }
-
   .w-\[180px\] {
     width: 180px;
   }
@@ -843,11 +827,6 @@
     flex-shrink: 0;
   }
 
-  .-translate-x-1\/2 {
-    --tw-translate-x: calc(calc(1 / 2 * 100%) * -1);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-
   .-translate-y-1\/2 {
     --tw-translate-y: calc(calc(1 / 2 * 100%) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
@@ -895,10 +874,6 @@
 
   .items-center {
     align-items: center;
-  }
-
-  .items-start {
-    align-items: flex-start;
   }
 
   .justify-between {
@@ -1034,11 +1009,6 @@
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
-  }
-
-  .border-b {
-    border-bottom-style: var(--tw-border-style);
-    border-bottom-width: 1px;
   }
 
   .border-black {
@@ -1183,10 +1153,6 @@
     padding-block: calc(var(--spacing) * 4);
   }
 
-  .py-6 {
-    padding-block: calc(var(--spacing) * 6);
-  }
-
   .py-8 {
     padding-block: calc(var(--spacing) * 8);
   }
@@ -1315,10 +1281,6 @@
 
   .text-gray-500 {
     color: var(--color-gray-500);
-  }
-
-  .text-gray-600 {
-    color: var(--color-gray-600);
   }
 
   .text-gray-700 {

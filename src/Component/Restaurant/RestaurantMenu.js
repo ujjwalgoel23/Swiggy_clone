@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router";
 import MenuCard from "./MenuCard";
-import Shimmer2 from "./Shimmer2"
+import Shimmer2 from "./Shimmer2";
 
 export default function RestaurantMenu() {
     const { id } = useParams();
