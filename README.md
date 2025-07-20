@@ -1,58 +1,56 @@
-# 🍽️ Swiggy Clone — React.js
+# 🍔 Swiggy Clone — React.js
 
-A frontend clone of the popular food delivery platform **Swiggy**, built using **React.js** and **Tailwind CSS**.  
-This project simulates core features like restaurant listings, menu browsing, cart management, and search functionality — all wrapped in a modern, responsive UI.
-
----
-
-## 🚀 Features
-
-- 🔍 Search restaurants and dishes  
-- 🍽️ Browse restaurants by categories  
-- 📜 View menus for individual restaurants  
-- 🛒 Add / remove items from cart  
-- 📱 Fully responsive (mobile-friendly)  
-- ⚡ Smooth, fast user experience powered by React  
+A fully responsive **Swiggy Clone** created using **React.js** and **Tailwind CSS**. This project is built to replicate the core functionality of the Swiggy platform, offering users the ability to browse restaurants, explore menus, manage their cart, and search for food — all within a fast and smooth web app.
 
 ---
 
-## 🛠️ Tech Stack
+## ✨ Key Highlights
 
-- **React.js**  
-- **React Router**  
-- **Redux**  
-- **Tailwind CSS**  
-- **React Icons**  
-- **Swiggy Public API (via CORS Proxy)**  
+- 🔍 Search for restaurants and food items  
+- 📂 Filter restaurants by categories  
+- 📋 View detailed menus for individual restaurants  
+- 🛒 Easily add or remove items from your cart  
+- 📱 Optimized for both desktop and mobile devices  
+- ⚡ Lightning-fast and seamless user experience  
 
 ---
 
-## ⚠️ Important Note Before Running the App
+## 🔧 Tools & Technologies Used
 
-Swiggy’s public APIs are protected by **CORS (Cross-Origin Resource Sharing)** restrictions, which block direct browser access.  
-To fetch real-time data successfully, this project uses a **CORS proxy**.
+- **React.js** for building the UI  
+- **React Router** for navigation and routing  
+- **Redux** for global state management  
+- **Tailwind CSS** for modern, responsive styling  
+- **React Icons** for icons  
+- **Public API** from Swiggy (via a CORS Proxy)  
 
-👉 **Step:**  
+---
+
+## ⚠️ Important Setup Before Running
+
+Swiggy’s APIs come with **CORS restrictions**, which prevent direct API calls from your browser. To access real-time data, this project makes use of a **CORS proxy service**.
+
+👉 **How to Enable API Access:**  
 Visit: [https://cors-anywhere.herokuapp.com/](https://cors-anywhere.herokuapp.com/)  
-Click **"Request temporary access to the demo server."**
+Click on **"Request temporary access to the demo server."**
 
-Without this step, API requests will fail, and the app may not load restaurant data.
+If you skip this step, data may fail to load due to blocked API requests.
 
 ---
 
-## 📦 Installation & Setup
+## 🚀 How to Run Locally
 
-Follow these steps to run the project locally:
+You can follow the steps below to set up this project on your machine:
 
 ```bash
-# Clone this repository
+# Download the repository
 git clone https://github.com/Anshikagoel11/Swiggy.git
 
-# Navigate into the project directory
+# Go to the project directory
 cd Swiggy
 
-# Install dependencies
+# Install required dependencies
 npm install
 
-# Start the development server
+# Start the application
 npm start
