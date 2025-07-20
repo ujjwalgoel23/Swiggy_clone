@@ -44,7 +44,7 @@ You can follow the steps below to set up this project on your machine:
 
 ```bash
 # Download the repository
-git clone https://github.com/Anshikagoel11/Swiggy.git
+git clone https://github.com/ujjwalgoel23/Swiggy_clone.git
 
 # Go to the project directory
 cd Swiggy
