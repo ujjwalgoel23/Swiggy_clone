@@ -33,7 +33,7 @@ export default function DineCard({ dineDetail }) {
               <span key={index} className="bg-gray-200 text-gray-700 px-2 py-1 rounded-full"> {offer?.logoCtx?.text}</span>
             ))}
           </div>
-
+  
          
           {dineDetail?.info?.offerInfoV3?.vendorOffer && (
             <div className="bg-[#1BA672] rounded-md px-2 py-1 text-white font-semibold text-sm">
