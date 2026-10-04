@@ -42,8 +42,6 @@ export default function Header() {
             <input className="bg-white text-black text-xl pl-10 pr-6 py-4 rounded-2xl w-full" type="text" placeholder="Search for restaurant, items & more" />
              <IoIosSearch className="absolute right-4 top-1/2 transform -translate-y-1/2 text-black text-xl" />
           </div>
- 
-         
          
         </div>
       </div>
