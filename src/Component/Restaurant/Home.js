@@ -8,6 +8,7 @@ export default function Home() {
 
   useEffect(() => {          
     async function fetchData() {
+      try{
       const proxyServer = "https://cors-anywhere.herokuapp.com/";
       const origAPI =
         "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.7040592&lng=77.10249019999999&is-seo-homepage-enabled=true";
@@ -19,6 +20,9 @@ export default function Home() {
 
       
       setRestData(restaurants);
+      }catch(err){
+        console.log("ERROR:-",err);
+      }
 
     }
 

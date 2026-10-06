@@ -20,8 +20,12 @@ export default function FoodDelivery() {
       <div className="w-[80%] mx-auto flex flex-wrap justify-center gap-4  mb-10">
         {visibleCities.map((list, index) =><FoodCityList key={index} list={list} /> )}
      
-       { FoodCities.length > 11 &&  <button onClick={() => setShowMore(!showMore)} className="bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition  block text-base font-semibold  w-60 h-18">{showMore ? "Show Less" : "Show More"} </button> }
-       </div>
+       { FoodCities.length > 11 && 
+        <button onClick={() => setShowMore(!showMore)}
+         className="bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition  block text-base font-semibold  w-60 h-18">
+          {showMore ? "Show Less" : "Show More"} </button>
+           }
+       </div> 
     </>
   );
 }

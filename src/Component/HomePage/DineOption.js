@@ -12,7 +12,6 @@ export default function DineOption() {
         {
             dineOutRestaurants.map((dineDetail)=><DineCard key={dineDetail?.info?.id} dineDetail={dineDetail}/>)
         }
-
      </div>
    </div>
   );

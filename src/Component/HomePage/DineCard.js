@@ -5,7 +5,7 @@ export default function DineCard({ dineDetail }) {
     <div className="w-80 bg-white rounded-xl shadow-sm overflow-hidden flex-none">
       <a target="_blank" href={dineDetail?.cta?.link}>
         <div className="relative">
-          <img className="w-full h-44 object-cover" src={"https://media-assets.swiggy.com/swiggy/image/upload/"+dineDetail?.info?.mediaFiles?.[0]?.url} alt="Restaurant" />
+          <img className="w-full h-44 object-cover" src={"https://media-assets.swiggy.com/swiggy/image/upload/"+dineDetail?.info?.mediaFiles[0]?.url} alt="Restaurant" />
           <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black to-transparent"></div>
           <p className="absolute bottom-2 left-2 text-white font-semibold text-lg z-10"> {dineDetail?.info?.name}</p>
           <div className="absolute bottom-2 right-2 flex items-center gap-1 text-white text-sm z-10">
