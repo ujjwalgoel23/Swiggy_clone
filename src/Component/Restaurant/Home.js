@@ -30,7 +30,7 @@ export default function Home() {
   }, []);
 
 if ( RestData.length === 0) {
-  return <Shimmer />;
+  return <Shimmer/>;
 }
 
 
@@ -46,16 +46,15 @@ if ( RestData.length === 0) {
         <Starter key={restInfo1.id} restInfo1={restInfo1} />
       </div>  
       ))
-
       }
     </div>
 
      <h1 className="font-bold mt-20 mb-2 font-sans ml-40 text-2xl">{ RestData[1]?.card?.card?.header?.title}</h1>
-
+   
     <div className="flex flex-nowrap overflow-x-auto w-[80%] mx-auto gap-4 mt-2 scrollbar-thin scrollbar-thumb-red-400 scrollbar-track-gray-200">
   {RestData[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants.map((restInfo) => (
     <div key={restInfo?.info?.id} className="min-w-[250px] mr-10">
-      <RestCard restInfo={restInfo} />
+      <RestCard restInfo={restInfo}/>
     </div>
   ))}
 </div>
@@ -72,3 +71,4 @@ if ( RestData.length === 0) {
     </>
   );
 }
+//not

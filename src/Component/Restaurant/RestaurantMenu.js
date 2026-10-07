@@ -9,7 +9,7 @@ export default function RestaurantMenu() {
     const [RestInfo, setRestInfo] = useState([]);
     const [finalData2 , setfinalData2 ] = useState([]);
     const [selected , setSelected]=useState(null)
-    const [RestData, setRestData] = useState([]); 
+    const [RestData, setRestData] = useState([]);   
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
@@ -23,7 +23,8 @@ export default function RestaurantMenu() {
             const restaurantInfo = data?.data?.cards[2]?.card?.card?.info;
              const restaurantInfo1 = data?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.offers;
             
-            const menuCards = data?.data?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
+            const menuCards = data?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
+            
             const filteredMenu = menuCards.filter( (items) =>
                   'title' in items?.card?.card &&
                   items?.card?.card?.title?.toLowerCase() !== "top picks"
